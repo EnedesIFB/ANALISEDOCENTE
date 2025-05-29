@@ -2,14 +2,28 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Análise Docente IFB</title>
+  <title>Análise de Perfil Docente - IFB</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Sistema de Análise de Perfil Docente - IFB</h1>
-  <input type="file" id="inputExcel" />
-  <button onclick="processar()">Analisar</button>
-  <div id="resultado"></div>
+  <header>
+    <h1>🎓 Análise de Perfil Docente</h1>
+    <p>Curso Técnico em Marketing - IFB</p>
+  </header>
+  <main>
+    <section class="upload-area">
+      <h2>📁 Enviar Planilha de Dados</h2>
+      <input type="file" id="inputExcel" accept=".csv, .xlsx">
+      <button onclick="analisar()">Analisar Dados</button>
+    </section>
+    <section class="resultado" id="resultado">
+      <h2>📊 Resultado da Análise</h2>
+      <p>Nenhum dado carregado ainda.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Instituto Federal de Brasília - ENEDES</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
