@@ -1,12 +1,13 @@
-function analisar() {
-  const input = document.getElementById('inputExcel');
-  const resultado = document.getElementById('resultado');
 
-  if (!input.files.length) {
-    alert("Por favor, selecione um arquivo.");
-    return;
+function startAnalysis() {
+  const fileInput = document.getElementById('fileInput');
+  const status = document.getElementById('status');
+  if (fileInput.files.length === 0) {
+    status.textContent = '❌ Nenhum arquivo selecionado.';
+  } else {
+    status.textContent = '🔍 Analisando... (simulação)';
+    setTimeout(() => {
+      status.textContent = '✅ Análise concluída com sucesso!';
+    }, 2000);
   }
-
-  const fileName = input.files[0].name;
-  resultado.innerHTML = '<h2>📊 Resultado da Análise</h2><p>Arquivo "' + fileName + '" carregado com sucesso!</p>';
 }
